@@ -1,0 +1,26 @@
+/* setting the body tag's default because its a simple website with only a little functionality*/
+body {
+    height: 100vh;
+    width: 100vw;
+    /*Height and width are being set to 100% view height and view width to make the site avalible on all screen sizes*/
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+    /*No scroll bars*/
+}
+
+#image-reel {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+}
+
+#image-reel > .image {
+    height: 40vmin;
+    width: 56vmin;
+    object-fit: cover;
+    object-position: center;
+}
