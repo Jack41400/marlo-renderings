@@ -9,18 +9,19 @@ body {
     /*No scroll bars*/
 }
 
+#image-reel > .image {
+    height: 40vmin;
+    width: 56vmin;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 #image-reel {
     display: flex;
     gap: 4vmin;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-20%, -50%);
-}
-
-#image-reel > .image {
-    height: 40vmin;
-    width: 56vmin;
-    object-fit: cover;
-    object-position: center;
+    transform: translate(0, -50%);
 }
