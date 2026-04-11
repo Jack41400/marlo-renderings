@@ -9,20 +9,41 @@
     <link rel='stylesheet' type='text/css' media='screen' href='assets/main.css'>
 </head>
 <body>
-<!--Images are linked here along with some basic text, styling is done mostly in main.css-->
-    <header>
-        <h1 style="color: white;">Marlo Pochiro</h1>
-    </header> 
+    <nav class="top-nav">
+        <div class="nav-left">
+            <h1 class="page-title">Marlo Pochiro</h1>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn">Home</button>
+            <button class="nav-btn">Gallery</button>
+            <button class="nav-btn">About</button>
+            <button class="nav-btn">Contact</button>
+            <button class="nav-btn">Shop</button>
+        </div>
+    </nav>
 
-<!--needed a container to hold the images-->
+<!-- viewport container keeps the reel centered but lets the page scroll -->
+    <section class="reel-viewport">
     <div id="image-reel" data-mouse-down-at="0">  
-        <img class="image" src="./assets/images/Enscape_2022-05-02-06-29-19.png" draggable="false"/>
-        <img class="image" src="./assets/images/Enscape_2022-05-02-07-38-27.png" draggable="false"/>
-        <img class="image" src="./assets/images/Enscape_2022-05-02-14-19-42.png" draggable="false"/>
-        <img class="image" src="./assets/images/Enscape_2022-05-02-15-23-38.png" draggable="false"/>
-        <img class="image" src="./assets/images/Enscape_2022-05-02-15-45-31.png" draggable="false"/>
-        <img class="image" src="./assets/images/Enscape_2022-05-02-15-50-21.png" draggable="false"/>
+        <!--Images are linked here along with some basic text, styling is done mostly in main.css-->
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-06-29-19.png" draggable="false" alt="render 1"/>
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-07-38-27.png" draggable="false" alt="render 2"/>
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-14-19-42.png" draggable="false" alt="render 3"/>
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-15-23-38.png" draggable="false" alt="render 4"/>
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-15-45-31.png" draggable="false" alt="render 5"/>
+        <img class="image crop-frame" src="./assets/images/Enscape_2022-05-02-15-50-21.png" draggable="false" alt="render 6"/>
     </div>
-    <script src="assets/index.js"></script>
+    </section>
+    <script src="assets/imageScroll.js"></script>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Help</a>
+            <a href="#">Instagram</a>
+            <a href="#">Contact</a>
+        </div>
+        <p>Copyright 2022 Marlo Pochiro</p>
+    </footer>
 </body>
 </html>

@@ -1,21 +1,67 @@
 /* setting the body tag's default because its a simple website with only a little functionality*/
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     /*Height and width are being set to 100% view height and view width to make the site avalible on all screen sizes*/
     background-color: black;
     margin: 0rem;
-    overflow: hidden;
-    /*No scroll bars*/
+    overflow-y: auto;
+    /* allow vertical scrolling so footer can be reached */
+}
+
+.page-title {
+    margin: 0;
+    padding: 0.5rem 0;
+    color: white;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+    font-size: 4vmin;
+    font-weight: 700;
+    user-select: none;
+    pointer-events: none;
+}
+
+.top-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    z-index: 10000;
+    background: rgba(0,0,0,0.35);
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.top-nav .nav-right {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.nav-btn {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.5rem 0.9rem;
+    font-size: 3.2vmin;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.14);
 }
 
 #image-reel > .image {
-    height: 40vmin;
-    width: 56vmin;
+     width: 100vmin;
+    height: 100vmin;
     object-fit: cover;
     object-position: center;
 }
-
 
 #image-reel {
     display: flex;
@@ -23,5 +69,21 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-18%, -50%);
+    user-select: none;
+}
+
+/* container that occupies one viewport so the page can scroll below it */
+.reel-viewport {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
 }
